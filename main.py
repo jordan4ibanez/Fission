@@ -92,21 +92,21 @@ def moveplayer(playerx,playery,moving,transitionx,transitiony,transition_step):
 					transitionx = -1
 					transitiony = 0
 					transition_step = transition_steps
-				if event.key == pygame.K_RIGHT:
+				elif event.key == pygame.K_RIGHT:
 					#playerx += 1
 					transition_step = transition_steps				
 					moving = True
 					transitionx = 1
 					transitiony = 0
 					transition_step = transition_steps
-				if event.key == pygame.K_UP:
+				elif event.key == pygame.K_UP:
 					#playery -= 1
 					transition_step = transition_steps
 					moving = True
 					transitionx = 0
 					transitiony = -1
 					transition_step = transition_steps
-				if event.key == pygame.K_DOWN:
+				elif event.key == pygame.K_DOWN:
 					#playery += 1
 					transition_step = transition_steps
 					moving = True
@@ -134,12 +134,12 @@ def cameratest(cube,offsetx,offsety,grid):
 		grid = 1
 	if grid == 1:
 		cube += 0.01
-		#offsetx += 0.1
-		#offsety += 0.1
+		offsetx += 0.1
+		offsety += 0.1
 	elif grid == -1:
 		cube -= 0.01
-		#offsetx -= 0.1
-		#offsety -= 0.1
+		offsetx -= 0.1
+		offsety -= 0.1
 	################################
 	return(cube,offsetx,offsety,grid)
 
